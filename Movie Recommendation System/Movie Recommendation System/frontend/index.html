@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="search-card">
+            <h2>🎬 Movie Recommendation System</h2>
+            
+            <div class="form-group">
+                <input type="text" id="movieInput" placeholder="Enter Movie Name (e.g., 3 Idiots, Avatar, RRR)">
+            </div>
+
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label for="genreSelect">Genre:</label>
+                    <select id="genreSelect">
+                        <option value="All">All Genres</option>
+                        <option value="Action">Action</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Thriller">Thriller</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="ratingSelect">Minimum Rating:</label>
+                    <select id="ratingSelect">
+                        <option value="1">⭐ 1 Star</option>
+                        <option value="2">⭐⭐ 2 Stars</option>
+                        <option value="3">⭐⭐⭐ 3 Stars</option>
+                        <option value="4">⭐⭐⭐⭐ 4 Stars</option>
+                        <option value="5">⭐⭐⭐⭐⭐ 5 Stars</option>
+                    </select>
+                </div>
+            </div>
+
+            <button onclick="getRecommendations()" class="btn-search">Find Recommendations</button>
+        </div>
+
+        <div class="results-header">
+            <h3>🍿 Recommended Results</h3>
+        </div>
+
+        <div class="movies-grid" id="results">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
